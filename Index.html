@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acts Study Series | E-book Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#031B4E; --navy:#062A66; --blue:#0A4FA3; --electric:#1677D2;
+  --sky:#5BB8FF; --white:#fff; --muted:#B8C9E5; --gold:#D4AF5A;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Montserrat,Arial,sans-serif;color:#10233f;background:#fff;line-height:1.6}
+.hero{min-height:760px;background:radial-gradient(circle at 78% 35%,#0c5dbb55 0,transparent 32%),linear-gradient(135deg,var(--deep),#020f2d 72%);color:#fff;display:flex;align-items:center;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-180px;top:-170px;background:#1677d21c;filter:blur(20px)}
+.container{width:min(1120px,92%);margin:auto}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center;position:relative;z-index:2}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--sky);font-weight:700}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:18px 0;font-weight:800;letter-spacing:-2px}
+h1 span{color:#78c8ff}
+.lead{font-size:16px;color:#dce8f8;max-width:650px}
+.cta{display:inline-block;margin-top:25px;padding:16px 27px;border-radius:10px;background:linear-gradient(135deg,#2188e8,#0d5cb7);color:#fff;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.5px;box-shadow:0 12px 30px #00173580}
+.cta:hover{transform:translateY(-2px)}
+.meta{display:flex;gap:24px;margin-top:25px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.book-stack{display:flex;justify-content:center;position:relative;flex-wrap:wrap}
+.book{width:min(140px,34vw)}
+.book:nth-child(1){transform:rotate(-14deg) translateX(46px);z-index:1}
+.book:nth-child(2){transform:rotate(-7deg) translateX(24px);z-index:2}
+.book:nth-child(3){transform:rotate(0deg) translateX(0);z-index:3}
+.book:nth-child(4){transform:rotate(7deg) translateX(-24px);z-index:2}
+.book:nth-child(5){transform:rotate(14deg) translateX(-46px);z-index:1}
+.book-cover{aspect-ratio:2/3;background:linear-gradient(160deg,#0b63be,#031538 72%);border:1px solid #70bfff66;border-radius:4px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset 0 0 50px #02132e88,0 30px 35px #0009}
+.book-cover small{font-size:7px;letter-spacing:2px;color:#a9d9ff;font-weight:700}.book-title{font-size:16px;line-height:1.05;font-weight:800}.book-sub{font-size:7px;color:#d7e8fa}.cross{font-size:30px;color:#8fd0ff;text-align:center;text-shadow:0 0 30px #4aaeff}
+section{padding:85px 0}.light{background:#f5f9ff}.dark{background:var(--deep);color:#fff}
+.section-title{text-align:center;font-size:34px;line-height:1.15;margin:0 auto 14px;font-weight:800;color:var(--deep)}
+.dark .section-title{color:#fff}.section-sub{text-align:center;max-width:700px;margin:0 auto 45px;font-size:12px;color:#61728c}.dark .section-sub{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #dbe8f8;border-radius:16px;padding:28px;box-shadow:0 12px 35px #062a6610}.dark .card{background:#062a66;border-color:#2874bd55;color:#fff}.icon{width:45px;height:45px;border-radius:12px;background:#e4f3ff;color:#0a4fa3;display:grid;place-items:center;font-size:20px;margin-bottom:18px}.card h3{font-size:15px;margin:0 0 8px}.card p{font-size:12px;color:#64748b;margin:0}.dark .card p{color:#bfd0e7}
+.chapters{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.chapter{padding:20px;border-left:3px solid var(--electric);background:#fff;border-radius:0 12px 12px 0;box-shadow:0 8px 25px #062a660c}.chapter strong{font-size:12px;color:var(--blue)}.chapter h3{margin:4px 0;font-size:15px;color:var(--deep)}.chapter p{font-size:12px;color:#66758a;margin:0}
+.book-block{margin-bottom:60px}.book-block:last-child{margin-bottom:0}
+.book-block-head{display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.book-tag{font-size:11px;font-weight:800;letter-spacing:1px;color:#fff;background:var(--electric);padding:6px 14px;border-radius:20px;white-space:nowrap}
+.book-block-head h3{font-size:20px;margin:0;color:#fff}
+.author{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}.author-box{height:300px;border-radius:22px;background:linear-gradient(145deg,#0a4fa3,#031b4e);display:grid;place-items:center;color:#9fd7ff;font-size:80px}.author h2{font-size:34px;color:var(--deep);margin:0 0 12px}.author p,.author li{font-size:12px;color:#60718a}.author ul{padding-left:18px}
+.offer{background:linear-gradient(135deg,var(--deep),#073d86);color:#fff;text-align:center}.price{font-size:50px;font-weight:800;margin:15px}.price-old{font-size:18px;text-decoration:line-through;color:#9fb6db;font-weight:600;margin-right:10px}.offer .section-title{color:#fff}.offer p{font-size:12px;color:#c7daf3}
+.bundle-list{list-style:none;padding:0;margin:22px auto 0;max-width:420px;text-align:left;font-size:13px}.bundle-list li{padding:8px 0;border-bottom:1px solid #ffffff22}
+.faq{max-width:760px;margin:auto}.faq details{border-bottom:1px solid #dbe5f1;padding:17px 0}.faq summary{font-size:12px;font-weight:700;color:var(--deep);cursor:pointer}.faq p{font-size:12px;color:#64748b}
+footer{background:#020f2d;color:#90a9ca;padding:35px 0;text-align:center;font-size:11px}
+@media(max-width:800px){.hero{min-height:auto;padding:85px 0}.hero-grid,.author{grid-template-columns:1fr}.hero-copy{text-align:center}.lead{margin:auto}.meta{justify-content:center}.cards{grid-template-columns:1fr}.chapters{grid-template-columns:1fr}.book-stack{margin-top:30px}section{padding:65px 0}.author-box{height:220px}h1{letter-spacing:-1px}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="container hero-grid">
+<div class="hero-copy">
+<div class="eyebrow">Message and Study Series on the Book of Acts</div>
+<h1>The Acts <span>Study Collection</span></h1>
+<p class="lead">Five e-books, one journey through the birth, growth, testing, mission, and expansion of the Church: from the outpouring of the Holy Spirit to a community in motion, a faith forged in the fire of trial, a church sent out to the world, and grace that breaks every cultural barrier. Understand Scripture, strengthen your faith, and turn biblical knowledge into practice.</p>
+<a class="cta" href="#offer">GET THE COLLECTION</a>
+<div class="meta"><span>✓ 5 e-books</span><span>✓ Bible study</span><span>✓ Small groups</span></div>
+</div>
+<div class="book-stack">
+<div class="book"><div class="book-cover"><small>E-BOOK 1</small><div><div class="cross">✦</div><div class="book-title">THE WORK OF<br>THE HOLY SPIRIT</div></div><div class="book-sub">Rev. Rodrigo Alexandre de Melo</div></div></div>
+<div class="book"><div class="book-cover"><small>E-BOOK 2</small><div><div class="cross">✦</div><div class="book-title">CHURCH<br>IN MOTION</div></div><div class="book-sub">Rev. Rodrigo Alexandre de Melo</div></div></div>
+<div class="book"><div class="book-cover"><small>E-BOOK 3</small><div><div class="cross">✦</div><div class="book-title">RESILIENT<br>CHURCH</div></div><div class="book-sub">Rev. Rodrigo Alexandre de Melo</div></div></div>
+<div class="book"><div class="book-cover"><small>E-BOOK 4</small><div><div class="cross">✦</div><div class="book-title">THE MISSION<br>OF THE CHURCH</div></div><div class="book-sub">Rev. Rodrigo Alexandre de Melo</div></div></div>
+<div class="book"><div class="book-cover"><small>E-BOOK 5</small><div><div class="cross">✦</div><div class="book-title">THE EXPANSION<br>OF GRACE</div></div><div class="book-sub">Rev. Rodrigo Alexandre de Melo</div></div></div>
+</div>
+</div></header>
+
+<section class="light">
+<div class="container">
+<h2 class="section-title">More than a reading.<br>A journey of edification.</h2>
+<p class="section-sub">Together, these five e-books were structured to connect Scripture with practical life and can be used for individual devotionals, Sunday School, Small Groups, and Cell Groups.</p>
+<div class="cards">
+<div class="card"><div class="icon">🔥</div><h3>Power of the Spirit</h3><p>Understand the Holy Spirit's role in empowerment, sanctification, and Christian witness.</p></div>
+<div class="card"><div class="icon">📖</div><h3>Biblical foundation</h3><p>Studies developed from texts in the book of Acts and their biblical correlations.</p></div>
+<div class="card"><div class="icon">🌍</div><h3>Grace without borders</h3><p>From Pentecost to the Gentile mission — see how the Gospel breaks every cultural barrier.</p></div>
+</div>
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+<h2 class="section-title">What will you find<br>in these pages?</h2>
+<p class="section-sub">Twenty-eight studies covering the birth, growth, testing, mission, and expansion of the early church and their application to Christian life today.</p>
+
+<div class="book-block">
+<div class="book-block-head"><span class="book-tag">E-BOOK 1</span><h3>The Work of the Holy Spirit</h3></div>
+<div class="chapters">
+<div class="card"><strong>CHAPTER 01</strong><h3>The Baptism with the Holy Spirit</h3><p>Acts 1:1–9 — promise, waiting, obedience, and empowerment to witness.</p></div>
+<div class="card"><strong>CHAPTER 02</strong><h3>The Message of the Church</h3><p>Acts 1:1–11 — Christ, the resurrection, the Kingdom of God, and the promise of the Spirit.</p></div>
+<div class="card"><strong>CHAPTER 03</strong><h3>Starting Well and Finishing Poorly</h3><p>A warning drawn from Judas' trajectory about superficiality, sin, and repentance.</p></div>
+<div class="card"><strong>CHAPTER 04</strong><h3>The "Suddenlys" of God</h3><p>Acts 2:1–2 — prayer, obedience, and God's transforming interventions.</p></div>
+<div class="card"><strong>CHAPTER 05</strong><h3>What Does This Mean?</h3><p>Acts 2:1–13 — the nature, meaning, and purpose of the Holy Spirit's work.</p></div>
+<div class="card"><strong>CHAPTER 06</strong><h3>The Pitiful Peter, or the Worthy Peter?</h3><p>Acts 2:14–41 — Peter's transformation and his new boldness to witness.</p></div>
+</div>
+</div>
+
+<div class="book-block">
+<div class="book-block-head"><span class="book-tag">E-BOOK 2</span><h3>Church in Motion</h3></div>
+<div class="chapters">
+<div class="card"><strong>CHAPTER 01</strong><h3>Living in Community</h3><p>Acts 2:42–47 — fellowship, perseverance in the Word, prayer, and generosity.</p></div>
+<div class="card"><strong>CHAPTER 02</strong><h3>Look at Us!</h3><p>Acts 3:1–10 — the healing at the Beautiful Gate and the authority of Jesus' name.</p></div>
+<div class="card"><strong>CHAPTER 03</strong><h3>The Message We Must Announce</h3><p>Acts 4:1–12 — boldness and fidelity to the Gospel in the face of opposition.</p></div>
+<div class="card"><strong>CHAPTER 04</strong><h3>Jesus, Our Salvation!</h3><p>Acts 4:8–12 — the centrality and exclusivity of Christ as Cornerstone and Savior.</p></div>
+<div class="card"><strong>CHAPTER 05</strong><h3>The Christian Community</h3><p>Acts 4:32–37 — unity, generosity, and practical care, with Barnabas as example.</p></div>
+</div>
+</div>
+
+<div class="book-block">
+<div class="book-block-head"><span class="book-tag">E-BOOK 3</span><h3>Resilient Church — Faith Forged in the Fire</h3></div>
+<div class="chapters">
+<div class="card"><strong>CHAPTER 01</strong><h3>When Do We Let Satan Fill Our Heart?</h3><p>Acts 5:1–11 — Ananias and Sapphira, hypocrisy, and the fear of the Lord.</p></div>
+<div class="card"><strong>CHAPTER 02</strong><h3>Worthy of Suffering for the Name</h3><p>Acts 5:41 — resilience, joy, and honor in the midst of persecution.</p></div>
+<div class="card"><strong>CHAPTER 03</strong><h3>Exemplary Service</h3><p>Acts 6:1–7 — Stephen and the dignity of every Spirit-filled service.</p></div>
+<div class="card"><strong>CHAPTER 04</strong><h3>Faithful When Everything Goes Wrong</h3><p>Acts 7:9–10 — Joseph's example: God's presence amid injustice.</p></div>
+<div class="card"><strong>CHAPTER 05</strong><h3>God Sees, God Hears, and God Comes Down</h3><p>Acts 7:31–34 — Moses and the burning bush: God's compassionate timing.</p></div>
+<div class="card"><strong>CHAPTER 06</strong><h3>When the Heart Returns to Egypt</h3><p>Acts 7:39–41 — hidden idolatry and the danger of spiritual amnesia.</p></div>
+<div class="card"><strong>CHAPTER 07</strong><h3>Firm Until the End</h3><p>Acts 7:51–60 — Stephen's martyrdom: faith, forgiveness, and eternity.</p></div>
+</div>
+</div>
+
+<div class="book-block">
+<div class="book-block-head"><span class="book-tag">E-BOOK 4</span><h3>The Mission of the Church</h3></div>
+<div class="chapters">
+<div class="card"><strong>CHAPTER 01</strong><h3>When God Says, Go!</h3><p>Acts 8:26–40 — Philip and the Ethiopian eunuch: urgency and obedience in the mission.</p></div>
+<div class="card"><strong>CHAPTER 02</strong><h3>Fruits of a Genuine Conversion</h3><p>Acts 9:1–6 — Saul's encounter with Jesus and the visible marks of true transformation.</p></div>
+<div class="card"><strong>CHAPTER 03</strong><h3>A Church that Grows on the Inside and the Outside</h3><p>Acts 9:31 — peace, mission, and maturity as the foundation of healthy growth.</p></div>
+<div class="card"><strong>CHAPTER 04</strong><h3>A Church that Cares for People</h3><p>Acts 9:32–43 — Peter, Aeneas, and Dorcas: practical love that produces testimony.</p></div>
+</div>
+</div>
+
+<div class="book-block">
+<div class="book-block-head"><span class="book-tag">E-BOOK 5</span><h3>The Expansion of Grace and the Borderless Gospel</h3></div>
+<div class="chapters">
+<div class="card"><strong>CHAPTER 01</strong><h3>The God Who Speaks</h3><p>Acts 10:1–6 — God prepares, confronts, and guides through visions and the Holy Spirit.</p></div>
+<div class="card"><strong>CHAPTER 02</strong><h3>The God Who Shows No Favoritism</h3><p>Acts 10:34–35 — breaking cultural barriers and the universal reach of grace.</p></div>
+<div class="card"><strong>CHAPTER 03</strong><h3>Who is Jesus?</h3><p>Acts 10:36–43 — Peter's Gospel summary: Lord, healer, crucified, risen, judge, and savior.</p></div>
+<div class="card"><strong>CHAPTER 04</strong><h3>When Are We Resisting God?</h3><p>Acts 11:17 — discerning God's new work instead of defending old traditions.</p></div>
+<div class="card"><strong>CHAPTER 05</strong><h3>The Disciples Were Called Christians</h3><p>Acts 11:19–30 — Antioch, discipleship, and a faith that changes character and conduct.</p></div>
+<div class="card"><strong>CHAPTER 06</strong><h3>What Happens When the Church Prays?</h3><p>Acts 12:5 — Peter's deliverance and the power of the praying church.</p></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container author">
+<div class="author-box">✝</div>
+<div>
+<h2>About the author</h2>
+<h3 style="color:#0a4fa3;font-size:16px">Rev. Rodrigo Alexandre de Melo</h3>
+<p>Pastor since 2000, ordained Reverend in 2006, in full communion with the Church of the Nazarene since 1994, with more than 25 years of pastoral ministry, church planting, and leadership development across Brazil. Married to Fabiana for 25 years and father of Caio Fábio.</p>
+<ul><li>Bachelor's Degree in Theology</li><li>Postgraduate Degree in Biblical Preaching</li><li>Postgraduate Degree in Strategic People Management</li><li>MBA in Strategic Business Management</li></ul>
+</div>
+</div>
+</section>
+
+<section class="offer" id="offer">
+<div class="container">
+<h2 class="section-title">Start your journey today</h2>
+<p>Get access to the complete Acts collection — <strong>The Work of the Holy Spirit</strong>, <strong>Church in Motion</strong>, <strong>Resilient Church</strong>, <strong>The Mission of the Church</strong>, and <strong>The Expansion of Grace</strong> — and use this material to deepen your faith and build up others.</p>
+<ul class="bundle-list">
+<li>✓ E-book 1 — The Work of the Holy Spirit (6 chapters)</li>
+<li>✓ E-book 2 — Church in Motion (5 chapters)</li>
+<li>✓ E-book 3 — Resilient Church: Faith Forged in the Fire (7 chapters)</li>
+<li>✓ E-book 4 — The Mission of the Church (4 chapters)</li>
+<li>✓ E-book 5 — The Expansion of Grace and the Borderless Gospel (6 chapters)</li>
+<li>✓ Small Groups / Sunday School discussion guides</li>
+</ul>
+<div class="price">$34.70</div>
+<a class="cta" href="#">BUY THE COLLECTION</a>
+<p style="margin-top:18px">Payment and digital delivery according to the sales platform.</p>
+</div>
+</section>
+
+<section>
+<div class="container faq">
+<h2 class="section-title">Frequently asked questions</h2>
+<details><summary>Are the e-books digital?</summary><p>Yes. All five e-books are delivered digitally.</p></details>
+<details><summary>Can I use this material in small groups?</summary><p>Yes. All five e-books include a guide with questions for Small Groups and Sunday School.</p></details>
+<details><summary>Is the content based on Acts?</summary><p>Yes. This collection is a message and study series on the book of Acts: E-book 1 covers Acts 1–2, E-book 2 continues through Acts 2–4, E-book 3 advances through Acts 5–7, E-book 4 moves into Acts 8–9, and E-book 5 concludes with Acts 10–12.</p></details>
+<details><summary>Do I need to read them in order?</summary><p>It's recommended. Each e-book picks up right where the previous one leaves off — from the outpouring of the Spirit (E-book 1), through a community in motion (E-book 2), a faith forged in trial (E-book 3), a church sent out on mission (E-book 4), to the expansion of grace across every cultural barrier (E-book 5).</p></details>
+<details><summary>What's new in E-book 5?</summary><p>E-book 5, "The Expansion of Grace and the Borderless Gospel," covers Cornelius's conversion, the Spirit falling on the Gentiles, the first believers called "Christians" in Antioch, and Peter's miraculous release through prayer (Acts 10–12).</p></details>
+</div>
+</section>
+<footer>© 2026 — The Acts Study Collection · Rev. Rodrigo Alexandre de Melo · All rights reserved.</footer>
+</body>
+</html>
